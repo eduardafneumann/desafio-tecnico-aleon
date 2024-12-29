@@ -1,6 +1,8 @@
 # Desafio Técnico Aleon
 
-O contaúdo desse repositório é minha proposta de solução ao desafio técnico do programa de estágio da empresa Aleon AI. 
+Acesse [aqui](https://github.com/eduardafneumann/desafio-tecnico-aleon) esse projeto no GitHub.
+
+O contaúdo desse repositório é minha proposta de solução ao desafio técnico do programa de estágio da empresa Aleon AI.
 
 ## Decisões tomadas durante o projeto
 
@@ -46,7 +48,9 @@ A API possui 6 endpoints para extração dos recursos da base de dados (além de
 * characters
 * events
 
-Durante a extração dos dados, foram limitadas quantas instâncias de cada recurso seriam coletadas devido à latência da API e à limitação de chamadas diárias que podem ser feitas pela mesma chave. Com limite máximo de 1000 instâncias por recurso (existem menos de 1000 events na base de dados), a extração durou cerca de 25 minutos.
+Durante a extração dos dados, foram limitadas quantas instâncias de cada recurso seriam coletadas devido à latência da API e à limitação de chamadas diárias que podem ser feitas pela mesma chave. Com limite máximo de 1000 instâncias por recurso (existem menos de 1000 events na base de dados), a extração durou cerca de 25 minutos. 
+
+O limite de instâncias por pacotes foi mantido no padrão 20 (porém a classe DataExtractor é estruturada para que, deseje-se alterar isso, basta alterar o atributo privado __limit), pois durante os testes um pacote com limite 100 possuia latência maior do que 5 pacotes com limite 20.
 
 ### Formatação de URL
 
