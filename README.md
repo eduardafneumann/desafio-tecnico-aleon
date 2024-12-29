@@ -8,7 +8,7 @@ O contaúdo desse repositório é minha proposta de solução ao desafio técnic
 
 A API escolhida para a extração dos dados foi [Marvel](https://developer.marvel.com), devido à grande possibilidades de análises possíveis, já que é uma grande base de dados, e para a demonstração do uso e administração de chaves privadas.
 
-A biblioteca usada para a visualização dos dados será [Vega Altair](https://altair-viz.github.io), devido à sua grande possíbilidade de customização de gráficos e visualização iterativa.
+A biblioteca usada para a visualização dos dados será [Vega Altair](https://altair-viz.github.io), devido à sua grande possíbilidade de customização de gráficos e visualização interativa.
 
 ## Execução
 
@@ -171,4 +171,14 @@ CREATE TABLE comic_in_event (
     FOREIGN KEY (event) REFERENCES event (id)
     PRIMARY KEY (comic, event)
 );
+
 ```
+
+## Visualizações dos dados
+
+As visualizações geradas não são suportadas para visualização no navegador web através do repositório GitHub. Para vê-las, abra o notebook através de um ambiente de desenvolvimento como o VSCode. As visualizações tambem foram salvas em formato png e são mostradas abaixo, porém não são interativas.
+
+![character-and-creators-in-comics](./graphs/character-and-creators-in-comics.png)
+![year-of-last-modification](./graphs/year-of-last-modification.png)
+![comic-price-vs-pages](./graphs/comic-price-vs-pages.png)
+![cocharacters-in-comics](./graphs/cocharacters-in-comics.png)
